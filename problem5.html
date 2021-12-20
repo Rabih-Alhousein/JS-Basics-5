@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        s = 0;
+        p = 1;
+        n = prompt("input a number")
+        sign= prompt("type sum or product")
+
+        if (sign=="sum") alert(sum(n))
+        else if (sign=="product") alert(product(n))
+
+
+        function sum(n){
+            for (let i = 1; i <= n; i++) {
+                    s += i
+                
+            }
+            return s
+        }
+
+        function product(n){
+            for (let i = 1; i <= n; i++) {
+                    p *= i
+            }
+            return p
+        }
+        
+        
+    </script>
+</body>
+
+</html>
