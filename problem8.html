@@ -14,18 +14,16 @@
         trial = 1;
 
         for (trial; trial <= 8; trial++) {
-            n = prompt("guess the number : ")
+            n = prompt("Guess the number : ")
             if (n == random) {
-                alert("correct with " + trial + " trials")
+                alert("Correct with " + trial + " trials")
                 break
             }
             if (n < random) {
                 alert("number is too small " + trial + '/8')
                 continue
-            }
-            if (n > random) {
+            } else {
                 alert("number is too large " + trial + '/8')
-                continue
             }
         }
     </script>
