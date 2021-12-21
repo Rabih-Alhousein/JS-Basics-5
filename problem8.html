@@ -9,22 +9,34 @@
 </head>
 
 <body>
+    <div id="body"></div>
     <script>
-        let random = Math.floor(Math.random() * 100) + 1;
-        trial = 1;
+        const random = Math.floor(Math.random() * 100) + 1;
+        var trial = 1;
+        var last
+        alert(random)
 
         for (trial; trial <= 8; trial++) {
-            n = prompt("Guess the number : ")
+            let n = prompt("Guess the number : ")
+            if (n == last) {
+                trial--
+                alert("Don't repeat the same number " + trial + '/8 trials')
+                continue
+            }
+
             if (n == random) {
                 alert("Correct with " + trial + " trials")
                 break
             }
             if (n < random) {
-                alert("number is too small " + trial + '/8')
-                continue
+                alert("number is too small " + '\n' + trial + '/8 trials')
             } else {
-                alert("number is too large " + trial + '/8')
+                alert("number is too large " + '\n' + trial + '/8 trials')
             }
+            
+            last = n
+
+            if (trial == 8) alert("You are a LOOSER :(")
         }
     </script>
 </body>
